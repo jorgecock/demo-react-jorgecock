@@ -37,6 +37,7 @@ function App() {
         <nav className="navbar">
           <ul className="nav-list">
             <li><Link to="/" className="nav-link">Inicio</Link></li>
+            <li><a href="https://jorgecock.github.io/" target="_blank" rel="noopener noreferrer">Página Personal</a></li>
             <li className="nav-dropdown">
               <Link to="/proyectos" className="nav-link">Proyectos</Link>
               <ul className="dropdown">
