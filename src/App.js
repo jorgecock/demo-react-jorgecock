@@ -51,18 +51,21 @@ function App() {
                 <li>
                   <Link to="/proyectos/angular">Futuro Proyecto en Angular</Link>
                 </li>
-                <li>
-                  <Link to="/proyectos/codeigniter">Futuro Proyecto en CodeIgniter</Link>
-                </li>
               </ul>
+            </li>
+            <li>
+               <Link to="/contacto">Contacto</Link>
             </li>
           </ul>
         </nav>
         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/proyectos" element={<Projects />} />
           <Route path="/proyectos/mochila" element={<Mochila />} />
           <Route path="/proyectos/vue" element={<div>Proyecto en Vue.js (próximamente)</div>} />
           <Route path="/proyectos/angular" element={<div>Proyecto en Angular (próximamente)</div>} />
           <Route path="/proyectos/codeigniter" element={<div>Proyecto en CodeIgniter (próximamente)</div>} />
+          <Route path="/contacto" element={<Contact />} />
         </Routes>
       </div>
     </Router>
