@@ -1,0 +1,27 @@
+[
+    {
+        "nombre": "E1",
+        "calorias": 3,
+        "peso": 5
+    },
+    {
+        "nombre": "E2",
+        "calorias": 5,
+        "peso": 3
+    },
+    {
+        "nombre": "E3",
+        "calorias": 2,
+        "peso": 5
+    },
+    {
+        "nombre": "E4",
+        "calorias": 8,
+        "peso": 1
+    },
+    {
+        "nombre": "E5",
+        "calorias": 3,
+        "peso": 2
+    }
+]

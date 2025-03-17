@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import Mochila from "./Mochila";
 
 function Home() {
   return (
@@ -32,24 +33,41 @@ function Contact() {
 function App() {
   return (
     <Router>
-      <div className="container">
-        <nav className="navbar">
-          <h2 className="logo">Mi Portafolio</h2>
+      <div>
+        <nav>
           <ul>
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/projects">Proyectos</Link></li>
-            <li><Link to="/contact">Contacto</Link></li>
+            <li>
+              <Link to="/">Inicio</Link>
+            </li>
+            <li>
+              <Link to="/proyectos">Proyectos</Link>
+              <ul>
+                <li>
+                  <Link to="/proyectos/mochila">Optimización de Mochila</Link>
+                </li>
+                <li>
+                  <Link to="/proyectos/vue">Futuro Proyecto en Vue.js</Link>
+                </li>
+                <li>
+                  <Link to="/proyectos/angular">Futuro Proyecto en Angular</Link>
+                </li>
+                <li>
+                  <Link to="/proyectos/codeigniter">Futuro Proyecto en CodeIgniter</Link>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
-
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/proyectos/mochila" element={<Mochila />} />
+          <Route path="/proyectos/vue" element={<div>Proyecto en Vue.js (próximamente)</div>} />
+          <Route path="/proyectos/angular" element={<div>Proyecto en Angular (próximamente)</div>} />
+          <Route path="/proyectos/codeigniter" element={<div>Proyecto en CodeIgniter (próximamente)</div>} />
         </Routes>
       </div>
     </Router>
   );
 }
+
 
 export default App;
