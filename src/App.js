@@ -35,22 +35,14 @@ function App() {
     <Router>
       <div>
         <nav className="navbar">
-          <ul>
-            <li>
-              <Link to="/" className="nav-link">Inicio</Link>
-            </li>
+          <ul className="nav-list">
+            <li><Link to="/" className="nav-link">Inicio</Link></li>
             <li className="nav-dropdown">
               <Link to="/proyectos" className="nav-link">Proyectos</Link>
               <ul className="dropdown">
-                <li>
-                  <Link to="/proyectos/mochila" className="nav-link">Optimización de Mochila</Link>
-                </li>
-                <li>
-                  <Link to="/proyectos/vue" className="nav-link">Futuro Proyecto en Vue.js</Link>
-                </li>
-                <li>
-                  <Link to="/proyectos/angular" className="nav-link">Futuro Proyecto en Angular</Link>
-                </li>
+                <li><Link to="/proyectos/mochila" className="nav-link">Optimización de Mochila</Link></li>
+                <li><Link to="/proyectos/vue" className="nav-link">Futuro Proyecto en Vue.js</Link></li>
+                <li><Link to="/proyectos/angular" className="nav-link">Futuro Proyecto en Angular</Link></li>
               </ul>
             </li>
             <li>
