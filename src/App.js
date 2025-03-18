@@ -13,6 +13,7 @@ function Home() {
   );
 }
 
+/*
 function SeguimientoSatelites() {
   return (
     <section className="seguimientosatelites">
@@ -21,6 +22,7 @@ function SeguimientoSatelites() {
     </section>
   );
 }
+*/
 
 
 function Projects() {

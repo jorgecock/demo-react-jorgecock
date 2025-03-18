@@ -3,112 +3,104 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5; /* Fondo claro */
+  background-color: #f5f5f5;
+  padding-top: 10px; /* Ajusta según la altura del navbar */
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  background-color: #f8f8f8;
-}
-
-nav ul li {
-  position: relative; /* Necesario para posicionar el dropdown */
-  padding: 10px 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-  padding: 10px;
-}
-
-nav ul li:hover > .dropdown {
-  display: block;
-}
-
-/* Navbar */
+/* Barra de navegación */
 .navbar {
-  background-color: white;
+  background-color: #0d6efd;
+  font-size: 30px;
+  color: white;
+  position: fixed; /* Se mantiene fija y no afecta el contenido */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   padding: 15px 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .nav-list {
   list-style: none;
-  display: flex;  /* Alineación horizontal */
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin: 0;
 }
 
+
 .nav-list li {
-  margin: 0 20px;
-  position: relative;
+  position: relative; /* Clave para dropdown absoluto */
+  padding: 10px 15px;
 }
 
+
 .nav-link {
-  color: #333;
+  color: white;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  padding: 10px 15px;
-  transition: color 0.3s, background 0.3s;
-}
-
-.nav-link:hover {
-  color: #007bff;
-}
-
-/* Estilos para el dropdown */
-.nav-dropdown:hover .dropdown {
   display: block;
 }
 
 
+.nav-link:hover {
+  text-decoration: underline;
+}
 
+
+/* Dropdown */
 .dropdown {
   display: none;
-  position: absolute;
-  background-color: white;
-  list-style: none;
-  padding: 0;
-  top: 100%;
+  position: absolute; /* Se superpone sin mover contenido */
+  top: 100%; /* Se despliega justo debajo */
   left: 0;
-  min-width: 220px;
+  min-width: 200px;
+  background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  width: 200px; /* Ancho fijo */
-  background: #ffffff;
-  z-index: 1000;
+  z-index: 9999;
+  padding: 0;
 }
 
+/* Asegurar que el dropdown flote correctamente */
+.nav-dropdown {
+  position: relative; /* Mantiene bien el dropdown */
+}
+
+.nav-dropdown:hover .dropdown {
+  display: block;
+  position: absolute; /* Esto asegura que flote */
+  text-decoration: underline;
+}
+
+/* Formato de los elementos dentro del dropdown */
 .dropdown li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   width: 100%;
-  padding: 10px;
 }
 
 .dropdown li a {
   color: #000;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+/* Asegurar que el color no cambie cuando el enlace ya ha sido visitado */
+.dropdown li a:visited {
+  color: black; /* Se mantiene blanco incluso después de ser visitado */
 }
 
 .dropdown li a:hover {
-  background: #ddd;
-}
-
-.dropdown .nav-link {
-  padding: 12px;
-  display: block;
-}
-
-.dropdown .nav-link:hover {
-  background-color: #007bff;
+  background: #0d6efd;
+  text-decoration: underline;
   color: white;
-  border-radius: 5px;
 }
-
