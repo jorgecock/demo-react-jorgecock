@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import Mochila from "./Mochila";
+import SateliteTracker from "./SateliteTracker";
 
 function Home() {
   return (
@@ -11,6 +12,16 @@ function Home() {
     </section>
   );
 }
+
+function SeguimientoSatelites() {
+  return (
+    <section className="seguimientosatelites">
+      <h1>Seguimiento de Satélites</h1>
+      <p>Programa de seguimiento de Satélites de la Nasa</p>
+    </section>
+  );
+}
+
 
 function Projects() {
   return (
@@ -42,6 +53,7 @@ function App() {
               <Link to="/proyectos" className="nav-link">Proyectos</Link>
               <ul className="dropdown">
                 <li><Link to="/proyectos/mochila" className="nav-link">Optimización de Mochila</Link></li>
+                <li><Link to="/proyectos/seguimientosatelites" className="nav-link">Seguimiento de Satélites</Link></li>
                 <li><Link to="/proyectos/vue" className="nav-link">Futuro Proyecto en Vue.js</Link></li>
                 <li><Link to="/proyectos/angular" className="nav-link">Futuro Proyecto en Angular</Link></li>
               </ul>
@@ -55,6 +67,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/proyectos" element={<Projects />} />
           <Route path="/proyectos/mochila" element={<Mochila />} />
+          <Route path="/proyectos/seguimientosatelites" element={<SateliteTracker />} />
           <Route path="/proyectos/vue" element={<div>Proyecto en Vue.js (próximamente)</div>} />
           <Route path="/proyectos/angular" element={<div>Proyecto en Angular (próximamente)</div>} />
           <Route path="/proyectos/codeigniter" element={<div>Proyecto en CodeIgniter (próximamente)</div>} />
